@@ -1,6 +1,14 @@
 let computerChoice = 1
-let playerChoice = "Rock"
+let playerInput = "scissors"
 let match
+let matchCount = 0
+let computerScore = 0
+let playerScore = 0
+let win
+let lose
+let draw
+
+
 
 function getComputerChoice(){
     computerChoice = Math.random() * 3;
@@ -16,10 +24,15 @@ function getComputerChoice(){
     }
 
 
-getComputerChoice()
-console.log(computerChoice)
-console.log(playerChoice)
-rockPaperScissors()
+//This makes PlayerInput case insensitive
+function formatPlayerInput() {
+  playerInput = playerInput.toLocaleLowerCase()
+  firstChar = playerInput.slice(0,1);
+  firstChar = firstChar.toUpperCase()
+  otherChar = playerInput.substring(1)
+  playerChoice = firstChar + otherChar
+  
+}
 
 
 
@@ -27,41 +40,104 @@ rockPaperScissors()
 
 
 
+
+
+
+
+//This takes computer and player choice and determines the winner.
 function rockPaperScissors(){
+    formatPlayerInput();
 match = computerChoice + " " + playerChoice;
 switch (match) {
     case "Rock Rock":
-        console.log("It's a draw, TRY AGAIN.")
+        return("It's a draw, TRY AGAIN.");
     break;
     case "Rock Paper":
-        console.log("Paper beats rock. YOU WIN!")
+        return("Paper beats rock. YOU WIN!");
     break;
     case "Rock Scissors":
-        console.log("Rock beats Scissors. YOU LOSE")
+        return("Rock beats Scissors. YOU LOSE");
     break;
     case "Paper Rock":
-        console.log("Paper beats rock. YOU LOSE!")
+        return("Paper beats rock. YOU LOSE!");
     break;
     case "Paper Paper":
-        console.log("It's a draw, TRY AGAIN.")
+        return("It's a draw, TRY AGAIN.");
     break;
     case "Paper Scissors":
-        console.log("Scissors beats paper. YOU WIN!")
+        return("Scissors beats paper. YOU WIN!");
     break;
     case "Scissors Rock":
-        console.log("Rock beats scissors. YOU LOSE!")
+        return("Rock beats scissors. YOU WIN!");
     break;
     case "Scissors Paper":
-        console.log("Scissors beats paper. YOU WIN!")
+        return("Scissors beats paper. YOU LOSE!");
     break;
     case "Scissors Scissors":
-        console.log("It's a draw, TRY AGAIN.")
+        return("It's a draw, TRY AGAIN.");
     break;
-    default: console.log(ERROR)
+    default: return "error";
 }
 }
 
 
+function playRound(){
+    playerInput = prompt();
+    getComputerChoice();
+    rockPaperScissors();
+    matchCount++;
+    getScore();
+    declareWinner();
+    console.log(computerChoice);
+    console.log(playerChoice);
+    console.log(rockPaperScissors());
+    console.log(declareWinner());
+    
+    
+}
+    
+
+ 
+// Checks for a win condition in the rockpaperscissors() return, then distributes points accordingly  
+function getScore(){
+if (rockPaperScissors().includes("YOU WIN!") ){
+ playerScore ++
+} else if (rockPaperScissors().includes("YOU LOSE!")){
+    computerScore ++
+} else {}
+}
+
+function resetScore(){
+    playerScore = 0;
+    computerScore =0;
+}
+
+function declareWinner() {
+    if (playerScore > computerScore){
+        return `Computer score: ${computerScore}. Player score: ${playerScore}. YOU WIN`
+    } else if (playerScore < computerScore) {
+        return `Computer score: ${computerScore}. Player score: ${playerScore}. YOU LOSE`
+    }  else {
+        return `Computer score: ${computerScore}. Player score: ${playerScore}. YOU Draw`
+    }
+}
+  
+  
+    
+    
+    
 
 
+//This plays 5 rounds...need to find a way to keep score
+function game() {
+    for (let matchCount = 1; matchCount < 6; matchCount++)
+playRound();
+resetScore()
+}
 
+
+game()
+
+console.log(rockPaperScissors().includes("YOU WIN!"))
+console.log(rockPaperScissors().includes("YOU LOSE!"))
+console.log(rockPaperScissors().includes("TRY AGAIN"))
