@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+}
+
+.gameDiv {
+    display: flex;
+    margin: 50px;
+    gap: 25px;
+}
+
