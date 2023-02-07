@@ -166,6 +166,7 @@ function declareFinalWinner(playerScore,computerScore) {
         let winSoundNum = 0
         if ((playerScore < 5 && computerScore < 5) && roundResultMessage.includes("You win!")) {
             winSoundNum = (Math.floor(Math.random () * 10) + 1);
+            console.log(winSoundNum)
         switch (winSoundNum){
             case 1:
            playerWin1.play()
@@ -194,7 +195,7 @@ function declareFinalWinner(playerScore,computerScore) {
            case 9:
             playerWin9.play() 
            break;
-           case 9:
+           case 10:
             playerWin10.play() 
            break;
         }
@@ -222,6 +223,7 @@ function declareFinalWinner(playerScore,computerScore) {
         let loseSoundNum = 0
         if ((playerScore < 5 && computerScore < 5) && roundResultMessage.includes("You lose!")) {
             loseSoundNum = (Math.floor(Math.random () * 10) + 1);
+            console.log(loseSoundNum)
         switch (loseSoundNum){
             case 1:
            playerLose1.play()
@@ -250,7 +252,7 @@ function declareFinalWinner(playerScore,computerScore) {
            case 9:
             playerLose9.play() 
            break;
-           case 9:
+           case 10:
             playerLose10.play() 
            break;
         }
