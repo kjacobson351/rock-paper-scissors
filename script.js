@@ -1,6 +1,4 @@
-window.onload= function(){
-    ropapsiIntro.play()
-};
+
 //get input from player(from buttons)
 
 
