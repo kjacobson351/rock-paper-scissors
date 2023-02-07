@@ -8,15 +8,49 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+    <!--These tags allow me to imbed audio-->
+    <audio id="ropapsiIntro" src="./sounds/ropapsiIntro.wav"></audio>
+    <audio id="playerLose1" src="./sounds/playerLoseSounds/playerLose1.wav"></audio>
+    <audio id="playerLose2" src="./sounds/playerLoseSounds/playerLose2.wav"></audio>
+    <audio id="playerLose3" src="./sounds/playerLoseSounds/playerLose3.wav"></audio>
+    <audio id="playerLose4" src="./sounds/playerLoseSounds/playerLose4.wav"></audio>
+    <audio id="playerLose5" src="./sounds/playerLoseSounds/playerLose5.wav"></audio>
+    <audio id="playerLose6" src="./sounds/playerLoseSounds/playerLose6.wav"></audio>
+    <audio id="playerLose7" src="./sounds/playerLoseSounds/playerLose7.wav"></audio>
+    <audio id="playerLose8" src="./sounds/playerLoseSounds/playerLose8.wav"></audio>
+    <audio id="playerLose9" src="./sounds/playerLoseSounds/playerLose9.wav"></audio>
+    <audio id="playerLose10" src="./sounds/playerLoseSounds/playerLose10.wav"></audio>
+    <audio id="finalPlayerLose1" src="./sounds/playerLoseSounds/finalPlayerLose1.wav"></audio>
+    <audio id="finalPlayerLose2" src="./sounds/playerLoseSounds/finalPlayerLose2.wav"></audio>
+    <audio id="finalPlayerLose3" src="./sounds/playerLoseSounds/finalPlayerLose3.wav"></audio>
+    <audio id="playerWin1" src="./sounds/playerWinSounds/playerWin1.wav"></audio>
+    <audio id="playerWin2" src="./sounds/playerWinSounds/finalPlayerWin2.wav"></audio>
+    <audio id="playerWin3" src="./sounds/playerWinSounds/playerWin3.wav"></audio>
+    <audio id="playerWin4" src="./sounds/playerWinSounds/playerWin4.wav"></audio>
+    <audio id="playerWin5" src="./sounds/playerWinSounds/playerWin5.wav"></audio>
+    <audio id="playerWin6" src="./sounds/playerWinSounds/playerWin6.wav"></audio>
+    <audio id="playerWin7" src="./sounds/playerWinSounds/playerWin7.wav"></audio>
+    <audio id="playerWin8" src="./sounds/playerWinSounds/playerWin8.wav"></audio>
+    <audio id="playerWin9" src="./sounds/playerWinSounds/Playerwin9.wav"></audio>
+    <audio id="playerWin10" src="./sounds/playerWinSounds/playerWin10.wav"></audio>
+    <audio id="finalPlayerWin1" src="./sounds/playerWinSounds/finalPlayerWin1.wav">
+    </audio>
+    <audio id="finalPlayerWin2" src="./sounds/playerWinSounds/finalPlayerWin2.wav">
+    </audio>
+    <audio id="finalPlayerWin3" src="./sounds/playerWinSounds/finalPlayerWin3.wav">
+    </audio>
+
     <div class="header"></div>
     
-    <h1>Rock Paper Scissors</h1>
+    <h1>R P S</h1>
     <div class= "gameDiv">
-        <h1 class="gameText">rock</h1>
-        <h1 class="gameText" id="playerText"></h1>
-        <h1 class="gameText">0</h1>
-        <h1 class="gameText">paper</h1>
-    </div>
+        <div class="gameText" id="playerChoiceText"></div>
+        <div class="gameText" id="playerScoreText"></div>
+        <div class="gameText" id="computerScoreText"></div>
+        <div class="gameText" id="computerChoiceText"></div>
+        </div>
+        <div class="roundResultText" id="roundResultMessageText"></div>
+        <div class="finalResultText" id="finalResultMessageText"></div>
     <div class= "buttons">
         <button id="rockBtn">Rock</button>
          <button id="paperBtn">Paper</button>

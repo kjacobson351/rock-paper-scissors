@@ -27,13 +27,20 @@ scissorsBtn.addEventListener('click', playerChoiceScissors)
 //////////////////////////////////////////////////////
 
 let playerChoice = "";
+const playerChoiceText = document.querySelector("#playerChoiceText")
 let computerChoice = 0;
+const computerChoiceText = document.querySelector("#computerChoiceText");
 let round = 0;
 let playerScore = 0;
-const playerText = document.querySelector("#playerText")
+const playerScoreText = document.querySelector("#playerScoreText")
 let computerScore = 0;
+const computerScoreText = document.querySelector("#computerScoreText");
 let roundResultMessage = "";
+const roundResultMessageText = document.querySelector("#roundResultMessageText")
 let finalResultMessage = "";
+const finalResultMessageText = document.querySelector("#finalResultMessageText")
+///////////////Sound Variables//////////////////////////////////////////////
+let ropapsiIntro = document.querySelector("#ropapsiIntro")
 
 //these functions change the player choice input based on html button press
 
@@ -42,8 +49,15 @@ playerChoice = "Rock"
 round++
 getComputerChoice()
 determineRoundWinner(playerChoice,computerChoice)
-playerText.textContent = playerScore;
+//This updates the UI/////////////////////////////////
+playerChoiceText.textContent = playerChoice;
+playerScoreText.textContent = playerScore;
+computerScoreText.textContent = computerScore;
+computerChoiceText.textContent = computerChoice;
+roundResultMessageText.textContent = roundResultMessage;
+///////////////////////////////////////////////////////
 declareFinalWinner(playerScore,computerScore)
+test()
 };
 
 function playerChoicePaper(){
@@ -51,6 +65,11 @@ playerChoice = "Paper"
 round++
 getComputerChoice()
 determineRoundWinner(playerChoice,computerChoice)
+playerChoiceText.textContent = playerChoice;
+playerScoreText.textContent = playerScore;
+computerScoreText.textContent = computerScore;
+computerChoiceText.textContent = computerChoice;
+roundResultMessageText.textContent = roundResultMessage;
 declareFinalWinner(playerScore,computerScore)
 };
 
@@ -59,6 +78,11 @@ function playerChoiceScissors(){
     round++
     getComputerChoice()
     determineRoundWinner(playerChoice,computerChoice)
+    playerChoiceText.textContent = playerChoice;
+playerScoreText.textContent = playerScore;
+computerScoreText.textContent = computerScore;
+computerChoiceText.textContent = computerChoice;
+roundResultMessageText.textContent = roundResultMessage;
     declareFinalWinner(playerScore,computerScore)
     };
 
@@ -81,7 +105,7 @@ function determineRoundWinner(playerChoice,computerChoice){
         roundResultMessage = "It's a draw!"
 
     } else if (playerChoice === "Rock" && computerChoice === "Scissors") {
-        roundResultMessage = "You Win! Rock smashes scissors";
+        roundResultMessage = "You win! Rock smashes scissors!";
         playerScore++;
 
     } else if (playerChoice === "Rock" && computerChoice === "Paper") {
@@ -102,12 +126,47 @@ function determineRoundWinner(playerChoice,computerChoice){
         computerScore++;
     } else {alert("determineRoundWinner ERROR")}
 }
-// declares to the first player with 5 points
+// declares to the first player with 5 points and removes buttons and roundResultMessageText
 function declareFinalWinner(playerScore,computerScore) {
     if (playerScore === 5) {
-        finalResultMessage = "PLAYER WINS"
+        finalResultMessage = "HUMAN WINS"
+        rockBtn.remove();
+        paperBtn.remove();
+        scissorsBtn.remove();
+        roundResultMessageText.remove();
+        finalResultMessageText.textContent = finalResultMessage;
     } if (computerScore === 5) {
         finalResultMessage = "COMPUTER WINS";
+        rockBtn.remove();
+        paperBtn.remove();
+        scissorsBtn.remove();
+        roundResultMessageText.remove();
+        finalResultMessageText.textContent = finalResultMessage;
     }
     };
-    
+
+    function test() {
+        if ((playerScore < 5 && computerScore < 5) && roundResultMessage.includes("You win!")) {
+            winSound = (Math.floor(Math.random () * 5) + 1);
+        switch (winSound){
+            case 1:
+           console.log(1)
+           break;
+           case 2:
+           console.log(2) 
+           break;
+           case 3:
+           console.log(3) 
+           break;
+           case 4:
+           console.log(4) 
+           break;
+           case 5:
+           console.log(5) 
+           break;
+ 
+        }
+    }
+    }; 
+//THIS WORKS!
+    //ropapsiIntro.play()

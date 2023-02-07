@@ -11,7 +11,24 @@ header {
 
 .gameDiv {
     display: flex;
-    margin: 50px;
+    justify-content: center;
+    margin: 25px;
     gap: 25px;
+    border-style: outset;
+    padding: 25px;
+    min-width: 225px;
+   
 }
 
+.gameText {
+   
+}
+
+.roundResultText {
+   margin-bottom: 20px;
+   
+}
+
+.finalResultText {
+    
+}
