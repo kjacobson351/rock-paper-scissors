@@ -56,8 +56,8 @@ computerScoreText.textContent = computerScore;
 computerChoiceText.textContent = computerChoice;
 roundResultMessageText.textContent = roundResultMessage;
 ///////////////////////////////////////////////////////
-declareFinalWinner(playerScore,computerScore)
-test()
+declareFinalWinner(playerScore,computerScore);
+winSound();
 };
 
 function playerChoicePaper(){
@@ -129,14 +129,14 @@ function determineRoundWinner(playerChoice,computerChoice){
 // declares to the first player with 5 points and removes buttons and roundResultMessageText
 function declareFinalWinner(playerScore,computerScore) {
     if (playerScore === 5) {
-        finalResultMessage = "HUMAN WINS"
+        finalResultMessage = "MEAT BAG WINS!?"
         rockBtn.remove();
         paperBtn.remove();
         scissorsBtn.remove();
         roundResultMessageText.remove();
         finalResultMessageText.textContent = finalResultMessage;
     } if (computerScore === 5) {
-        finalResultMessage = "COMPUTER WINS";
+        finalResultMessage = "RoPapSi WINS!";
         rockBtn.remove();
         paperBtn.remove();
         scissorsBtn.remove();
@@ -145,28 +145,46 @@ function declareFinalWinner(playerScore,computerScore) {
     }
     };
 
-    function test() {
+    function winSound() {
         if ((playerScore < 5 && computerScore < 5) && roundResultMessage.includes("You win!")) {
-            winSound = (Math.floor(Math.random () * 5) + 1);
+            winSound = (Math.floor(Math.random () * 10) + 1);
         switch (winSound){
             case 1:
-           console.log(1)
+           playerWin1.play()
            break;
            case 2:
-           console.log(2) 
+            playerWin2.play() 
            break;
            case 3:
-           console.log(3) 
+            playerWin3.play() 
            break;
            case 4:
-           console.log(4) 
+            playerWin4.play() 
            break;
            case 5:
-           console.log(5) 
+            playerWin5.play() 
            break;
- 
+           case 6:
+            playerWin6.play() 
+           break;
+           case 7:
+            playerWin7.play() 
+           break;
+           case 8:
+            playerWin8.play() 
+           break;
+           case 9:
+            playerWin9.play() 
+           break;
+           case 9:
+            playerWin10.play() 
+           break;
         }
     }
     }; 
 //THIS WORKS!
     //ropapsiIntro.play()
+
+
+
+
