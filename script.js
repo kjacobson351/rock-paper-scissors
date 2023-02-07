@@ -1,3 +1,6 @@
+window.onload= function(){
+    ropapsiIntro.play()
+};
 //get input from player(from buttons)
 
 
@@ -32,17 +35,22 @@ let computerChoice = 0;
 const computerChoiceText = document.querySelector("#computerChoiceText");
 let round = 0;
 let playerScore = 0;
-const playerScoreText = document.querySelector("#playerScoreText")
+const playerScoreText = document.querySelector("#playerScoreText");
 let computerScore = 0;
 const computerScoreText = document.querySelector("#computerScoreText");
 let roundResultMessage = "";
-const roundResultMessageText = document.querySelector("#roundResultMessageText")
+const roundResultMessageText = document.querySelector("#roundResultMessageText");
 let finalResultMessage = "";
-const finalResultMessageText = document.querySelector("#finalResultMessageText")
+const finalResultMessageText = document.querySelector("#finalResultMessageText");
 ///////////////Sound Variables//////////////////////////////////////////////
-let ropapsiIntro = document.querySelector("#ropapsiIntro")
+let ropapsiIntro = document.querySelector("#ropapsiIntro");
+let win;
+let lose;
+
+
 
 //these functions change the player choice input based on html button press
+
 
 function playerChoiceRock(){
 playerChoice = "Rock"
@@ -58,6 +66,9 @@ roundResultMessageText.textContent = roundResultMessage;
 ///////////////////////////////////////////////////////
 declareFinalWinner(playerScore,computerScore);
 winSound();
+loseSound();
+finalWinSound();
+finalLoseSound();
 };
 
 function playerChoicePaper(){
@@ -71,6 +82,10 @@ computerScoreText.textContent = computerScore;
 computerChoiceText.textContent = computerChoice;
 roundResultMessageText.textContent = roundResultMessage;
 declareFinalWinner(playerScore,computerScore)
+winSound();
+loseSound();
+finalWinSound();
+finalLoseSound();
 };
 
 function playerChoiceScissors(){
@@ -83,8 +98,12 @@ playerScoreText.textContent = playerScore;
 computerScoreText.textContent = computerScore;
 computerChoiceText.textContent = computerChoice;
 roundResultMessageText.textContent = roundResultMessage;
-    declareFinalWinner(playerScore,computerScore)
-    };
+declareFinalWinner(playerScore,computerScore)
+winSound();
+loseSound();
+finalWinSound();
+finalLoseSound();
+};
 
 //Determines computer choice from random number between 0-2
 function getComputerChoice(){
@@ -146,9 +165,10 @@ function declareFinalWinner(playerScore,computerScore) {
     };
 
     function winSound() {
+        let winSoundNum = 0
         if ((playerScore < 5 && computerScore < 5) && roundResultMessage.includes("You win!")) {
-            winSound = (Math.floor(Math.random () * 10) + 1);
-        switch (winSound){
+            winSoundNum = (Math.floor(Math.random () * 10) + 1);
+        switch (winSoundNum){
             case 1:
            playerWin1.play()
            break;
@@ -182,6 +202,81 @@ function declareFinalWinner(playerScore,computerScore) {
         }
     }
     }; 
+
+    function finalWinSound() {
+        let winSoundNum = 0
+        if (playerScore === 5) {
+            winSoundNum = (Math.floor(Math.random () * 3) + 1);
+        switch (winSoundNum){
+            case 1:
+           finalPlayerWin1.play()
+           break;
+           case 2:
+            finalPlayerWin2.play() 
+           break;
+           case 3:
+            finalPlayerWin3.play() 
+        }
+    }
+};
+
+    function loseSound() {
+        let loseSoundNum = 0
+        if ((playerScore < 5 && computerScore < 5) && roundResultMessage.includes("You lose!")) {
+            loseSoundNum = (Math.floor(Math.random () * 10) + 1);
+        switch (loseSoundNum){
+            case 1:
+           playerLose1.play()
+           break;
+           case 2:
+            playerLose2.play() 
+           break;
+           case 3:
+            playerLose3.play() 
+           break;
+           case 4:
+            playerLose4.play() 
+           break;
+           case 5:
+            playerLose5.play() 
+           break;
+           case 6:
+            playerLose6.play() 
+           break;
+           case 7:
+            playerLose7.play() 
+           break;
+           case 8:
+            playerLose8.play() 
+           break;
+           case 9:
+            playerLose9.play() 
+           break;
+           case 9:
+            playerLose10.play() 
+           break;
+        }
+    }
+    }; 
+
+    function finalLoseSound() {
+        let loseSoundNum = 0
+        if (computerScore === 5) {
+            loseSoundNum = (Math.floor(Math.random () * 3) + 1);
+        switch (loseSoundNum){
+            case 1:
+           finalPlayerLose1.play()
+           break;
+           case 2:
+            finalPlayerLose2.play() 
+           break;
+           case 3:
+            finalPlayerLose3.play() 
+        }
+    }
+};
+
+
 //THIS WORKS!
     //ropapsiIntro.play()
 
