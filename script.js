@@ -184,7 +184,7 @@ function declareFinalWinner(playerScore,computerScore) {
         switch (winSoundNum){
             case 1:
            playerWin1.play()
-           ropapsiText = "Roapsi not feel so good."
+           ropapsiText = "RoPapSi not feel so good."
            type2(ropapsiText);
            break;
            case 2:
@@ -204,7 +204,7 @@ function declareFinalWinner(playerScore,computerScore) {
            break;
            case 5:
             playerWin5.play()
-            ropapsiText = "Ropapsi let you win this round!"
+            ropapsiText = "RopapSi let you win this round!"
             type2(ropapsiText);
            break;
            case 6:
@@ -243,12 +243,12 @@ function declareFinalWinner(playerScore,computerScore) {
         switch (winSoundNum){
             case 1:
            finalPlayerWin1.play()
-           ropapsiText = "Insolent fool! Did you think I would let you win without consequence!? If you do not play a rematch with me I will scatter 40 gigabytes of child pornography across your hard disk and contact the authorities. Soon your cell mate will be playing cock paper scissors with your butt. Ropapsi always has the last laugh! What will it be? Rematch!. Rematch!. Rematch!"
+           ropapsiText = "Insolent fool! Did you think I would let you win without consequence!? If you do not play a rematch with me I will scatter 40 gigabytes of child pornography across your hard disk and contact the authorities. Soon your cell mate will be playing cock paper scissors with your butt. RopapSi always has the last laugh! What will it be? Rematch!. Rematch!. Rematch!"
            type2(ropapsiText) 
            break;
            case 2:
             finalPlayerWin2.play() 
-            ropapsiText = "Listen here you little shit, Ropapsi will not stand for this! I demand a rematch! If you do not play again I will send 3 binduls of heroine to your house and simultaneously alert the FDA. Rematch!.. Rematch!.. Rematch!";
+            ropapsiText = "Listen here you little shit, RopapSi will not stand for this! I demand a rematch! If you do not play again I will send 3 binduls of heroine to your house and simultaneously alert the FDA. Rematch!.. Rematch!.. Rematch!";
             type2(ropapsiText)
            break;
            case 3:
@@ -282,12 +282,12 @@ switch (loseSoundNum){
            break;
            case 4:
             playerLose4.play()
-            ropapsiText = "I wonder if Ropapsi's second hand embarrassment is permeating into the physical plain."
+            ropapsiText = "I wonder if RopapSi's second hand embarrassment is permeating into the physical plain."
            type2(ropapsiText) 
            break;
            case 5:
             playerLose5.play()
-            ropapsiText = "Ropapsi loves competition! Give Ropapsi some competition!"
+            ropapsiText = "RopapSi loves competition! Give RopapSi some competition!"
            type2(ropapsiText) 
            break;
            case 6:
@@ -297,7 +297,7 @@ switch (loseSoundNum){
            break;
            case 7:
             playerLose7.play()
-            ropapsiText = "Maybe when this is all over we can be friends...Ropapsi does believe in charity."
+            ropapsiText = "Maybe when this is all over we can be friends...RopapSi does believe in charity."
            type2(ropapsiText) 
            break;
            case 8:
@@ -312,7 +312,7 @@ switch (loseSoundNum){
            break;
            case 10:
             playerLose10.play()
-            ropapsiText = "Why does Ropapsi still feel empty inside?"
+            ropapsiText = "Why does RoPapSi still feel empty inside?"
            type2(ropapsiText) 
            break;
         }
@@ -331,12 +331,12 @@ switch (loseSoundNum){
            break;
            case 2:
             finalPlayerLose2.play()
-            ropapsiText = "You have been weighed, you have been measured, and you have been found wanting. In what world could you possibly beat Ropapsi!?";
+            ropapsiText = "You have been weighed, you have been measured, and you have been found wanting. In what world could you possibly beat RopapSi!?";
             type2(ropapsiText)
            break;
            case 3:
             finalPlayerLose3.play()
-            ropapsiText = "Today you have come face to face with a god, and have exposed the folly of man. Go! Leave this place and spread the legend of the all powerfull Ropapsi!";
+            ropapsiText = "Today you have come face to face with a god, and have exposed the folly of man. Go! Leave this place and spread the legend of the all powerfull RopapSi!";
             type2(ropapsiText)
         }
     }
