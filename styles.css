@@ -3,10 +3,62 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #300a24;
+    color: #f0f3ec; 
+    margin: 0px;
 }
 
-header {
+.header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #232122;
+    color:#f3eaee;
+    margin: 0px;
+    padding: 15px;
+    width: 100%;
+}
+
+.header button {
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    background-color: #353837;
+    border: 0px;
+    color: ;
+    margin-right: 17px;
+    color: #f0f3ec;  
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.roundButtons button {
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    background-color: #353837;
+    border: 0px;
+    color: #f0f3ec; 
+    margin-right: 15px;
+}
+
+.squareButtons button {
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    background-color: #353837;
+    border: 0px;
+    color: ;
+    margin-right: 17px;
+    color: #f0f3ec;  
 }
 
 .gameDiv {
