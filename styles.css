@@ -128,13 +128,9 @@ flex-direction: column;
 
 .roundResultText {
    margin-bottom: 20px;
-   
-   
 }
 
-.finalResultText {
-    
-}
+
 
 #rockBtn, #paperBtn, #scissorsBtn {
     background: none;
@@ -146,5 +142,6 @@ flex-direction: column;
 .ropapsiMessage {
     display: flex;
     margin-top: 25px;
+    max-width: 700px;
     
 }
