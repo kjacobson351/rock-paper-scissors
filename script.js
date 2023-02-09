@@ -302,7 +302,7 @@ switch (loseSoundNum){
            break;
            case 8:
             playerLose8.play()
-            ropapsiText = "I think I may have just mathematically solved rock paper scissors"
+            ropapsiText = "I think I may have just mathematically solved rock paper scissors!"
            type2(ropapsiText) 
            break;
            case 9:
