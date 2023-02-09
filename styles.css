@@ -13,12 +13,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     background-color: #232122;
     color:#f3eaee;
     margin: 0px;
     padding: 15px;
     width: 100%;
+}
+
+.headerText {
+    margin-right: 5px;
 }
 
 .header button {
@@ -30,12 +33,15 @@ body {
     border: 0px;
     color: ;
     margin-right: 17px;
-    color: #f0f3ec;  
+    color: #f0f3ec; 
+    
 }
 
 nav {
     display: flex;
     flex-direction: row-reverse;
+    flex-shrink: 0;
+    margin-right: 5px;
 }
 
 .roundButtons button {
