@@ -77,6 +77,12 @@ pre {
     color: #f0f3ec;
     font-size: 12px;
     margin-right: 20px;
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin: 0px;
+    margin-bottom: 20px;
 }
 
 .gameDiv {
