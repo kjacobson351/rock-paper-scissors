@@ -1,9 +1,13 @@
+
+
 body {
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    
     background-color: #300a24;
     color: #f0f3ec; 
     margin: 0px;
@@ -12,9 +16,10 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    flex-shrink: 0;
     align-items: center;
     background-color: #232122;
-    color:#f3eaee;
+    color: #f0f3ec;
     margin: 0px;
     padding: 15px;
     width: 100%;
@@ -41,7 +46,8 @@ nav {
     display: flex;
     flex-direction: row-reverse;
     flex-shrink: 0;
-    margin-right: 5px;
+    flex-wrap: nowrap;
+    margin-right: 0px;
 }
 
 .roundButtons button {
@@ -66,16 +72,48 @@ nav {
     margin-right: 17px;
     color: #f0f3ec;  
 }
+pre {
+    
+    color: #f0f3ec;
+    font-size: 12px;
+    margin-right: 20px;
+}
 
 .gameDiv {
     display: flex;
-    justify-content: center;
+
+    
     margin: 25px;
     gap: 25px;
-    border-style: outset;
+    border-style: dashed;
+    border-color: #f0f3ec;
     padding: 25px;
     min-width: 225px;
    
+}
+
+.player {
+display: flex;
+flex-direction: column;
+}
+
+#playerChoiceText, #playerScoreText {
+    display: flex;
+    justify-content: center;
+    color: #279c62;
+    margin: 10px;
+} 
+
+.computer {
+    display: flex;
+    flex-direction: column;   
+}
+
+#computerChoiceText, #computerScoreText {
+    display: flex;
+    justify-content: center;
+    color: #279c62;
+    margin: 10px;
 }
 
 .gameText {
@@ -85,17 +123,22 @@ nav {
 .roundResultText {
    margin-bottom: 20px;
    
+   
 }
 
 .finalResultText {
     
 }
 
-.buttons {
-    display: flex;
+#rockBtn, #paperBtn, #scissorsBtn {
+    background: none;
+    border: 0px;
+    font-family: 'Press Start 2P', cursive;
+    color: #f0f3ec;
 }
 
 .ropapsiMessage {
     display: flex;
     margin-top: 25px;
+    
 }

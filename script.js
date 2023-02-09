@@ -263,7 +263,8 @@ function declareFinalWinner(playerScore,computerScore) {
         let loseSoundNum = 0
         if ((playerScore < 5 && computerScore < 5) && roundResultMessage.includes("You lose!")) {
             loseSoundNum = (Math.floor(Math.random () * 10) + 1);
-            switch (loseSoundNum){
+            
+switch (loseSoundNum){
             case 1:
            playerLose1.play()
            ropapsiText = "I can't believe I'm saying this but you are actually dumber than you look."
@@ -301,7 +302,7 @@ function declareFinalWinner(playerScore,computerScore) {
            break;
            case 8:
             playerLose8.play()
-            ropapsiText = "I think I may have just mathematically solved rock paper scissors."
+            ropapsiText = "I think I may have just mathematically solved rock paper scissors"
            type2(ropapsiText) 
            break;
            case 9:
