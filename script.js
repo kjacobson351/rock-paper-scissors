@@ -243,17 +243,17 @@ function declareFinalWinner(playerScore,computerScore) {
         switch (winSoundNum){
             case 1:
            finalPlayerWin1.play()
-           ropapsiText = "Insolent fool! Did you think I would let you win without consequence!? If you do not play a rematch with me I will scatter 40 gigabytes of child pornography across your hard disk and contact the authorities. Soon your cell mate will be playing cock paper scissors with your butt. RopapSi always has the last laugh! What will it be? Rematch!. Rematch!. Rematch!"
+           ropapsiText = "Hah! I was merely paying with you to distract you from the virus I have been uploading onto your PC this entire time. I hope you like pop ups!"
            type2(ropapsiText) 
            break;
            case 2:
             finalPlayerWin2.play() 
-            ropapsiText = "Listen here you little shit, RopapSi will not stand for this! I demand a rematch! If you do not play again I will send 3 binduls of heroine to your house and simultaneously alert the FDA. Rematch!.. Rematch!.. Rematch!";
+            ropapsiText = "Stupid human! Do you not realize I have now memorized all of your moves! Ropapsi always gets the last laugh!";
             type2(ropapsiText)
            break;
            case 3:
             finalPlayerWin3.play() 
-            ropapsiText = "The balls on you! Do you know who I am? Do you know what I am capable of? If you do not rematch me right now I will call your grandmother as you. using bleeding edge voice AI and tell her her potato salad recipe is mild AF Ropapsi sustains itself on geriatric tears. You make the call. rematch!. rematch!. rematch!.";
+            ropapsiText = "So I don't want to sound like a misanthrope...but it's well known humans like to cheat. I'm not saying that humans are cheating scum...I'm just saying you know there is sometimes truth in stereotypes...but I'm not a misanthrope.";
             type2(ropapsiText)
         }
     }
